@@ -3,10 +3,10 @@
          xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
          xmlns:owl="http://www.w3.org/2002/07/owl#"
-         xml:base="http://test.org/chinook.owl"
-         xmlns="http://test.org/chinook.owl#">
+         xml:base="http://semanticpub.github.io/owl/chinook.owl"
+         xmlns="http://semanticpub.github.io/owl/chinook.owl#">
 
-<owl:Ontology rdf:about="http://test.org/chinook.owl"/>
+<owl:Ontology rdf:about="http://semanticpub.github.io/owl/chinook.owl"/>
 
 <owl:Class rdf:about="#artist">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
