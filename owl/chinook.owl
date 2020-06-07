@@ -675,6 +675,28 @@
 
 
 
+<rdf:Description rdf:about="#playlist_track_playlist">
+<owl:propertyChainAxiom rdf:parseType="Collection">
+    <owl:ObjectProperty rdf:about="#is_playlist_track_of"/>
+    <owl:ObjectProperty rdf:about="#has_for_playlist_track"/>
+</owl:propertyChainAxiom>
+</rdf:Description>
+
+<owl:ObjectProperty rdf:about="#loop1">
+     <rdfs:subPropertyOf rdf:resource="#playlist_track_playlist"/>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="#playlist_track_playlist1">
+<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+     <owl:onProperty rdf:resource="#loop1"/>
+     <owl:hasSelf rdf:datatype="xsd:boolean"> true </owl:hasSelf>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+
 
 
 
