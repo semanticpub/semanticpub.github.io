@@ -2567,29 +2567,6 @@
 </owl:Class>
 
 
-<rdf:Description rdf:about="#city_province_country_city">
-<owl:propertyChainAxiom rdf:parseType="Collection">
-    <owl:ObjectProperty rdf:about="#has_for_city_province_we"/>
-    <owl:ObjectProperty rdf:about="#has_for_province_country_we"/>
-    <owl:ObjectProperty rdf:about="#has_for_country_capital_fk"/>
-</owl:propertyChainAxiom>
-</rdf:Description>
-
-<owl:ObjectProperty rdf:about="#loop2">
-     <rdfs:subPropertyOf rdf:resource="#city_province_country_city"/>
-</owl:ObjectProperty>
-
-<owl:Class rdf:about="#city_province_country_city2">
-<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-<rdfs:subClassOf>
-<owl:Restriction>
-     <owl:onProperty rdf:resource="#loop2"/>
-     <owl:hasSelf rdf:datatype="xsd:boolean"> true </owl:hasSelf>
-</owl:Restriction>
-</rdfs:subClassOf>
-</owl:Class>
-
-
 <rdf:Description rdf:about="#city_province_river_lake_island_city">
 <owl:propertyChainAxiom rdf:parseType="Collection">
     <owl:ObjectProperty rdf:about="#has_for_city_province_we"/>
@@ -2600,15 +2577,15 @@
 </owl:propertyChainAxiom>
 </rdf:Description>
 
-<owl:ObjectProperty rdf:about="#loop3">
+<owl:ObjectProperty rdf:about="#loop2">
      <rdfs:subPropertyOf rdf:resource="#city_province_river_lake_island_city"/>
 </owl:ObjectProperty>
 
-<owl:Class rdf:about="#city_province_river_lake_island_city3">
+<owl:Class rdf:about="#city_province_river_lake_island_city2">
 <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
 <rdfs:subClassOf>
 <owl:Restriction>
-     <owl:onProperty rdf:resource="#loop3"/>
+     <owl:onProperty rdf:resource="#loop2"/>
      <owl:hasSelf rdf:datatype="xsd:boolean"> true </owl:hasSelf>
 </owl:Restriction>
 </rdfs:subClassOf>
@@ -2624,11 +2601,34 @@
 </owl:propertyChainAxiom>
 </rdf:Description>
 
-<owl:ObjectProperty rdf:about="#loop4">
+<owl:ObjectProperty rdf:about="#loop3">
      <rdfs:subPropertyOf rdf:resource="#city_province_river_island_city"/>
 </owl:ObjectProperty>
 
-<owl:Class rdf:about="#city_province_river_island_city4">
+<owl:Class rdf:about="#city_province_river_island_city3">
+<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+     <owl:onProperty rdf:resource="#loop3"/>
+     <owl:hasSelf rdf:datatype="xsd:boolean"> true </owl:hasSelf>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+
+<rdf:Description rdf:about="#city_province_country_city">
+<owl:propertyChainAxiom rdf:parseType="Collection">
+    <owl:ObjectProperty rdf:about="#has_for_city_province_we"/>
+    <owl:ObjectProperty rdf:about="#has_for_province_country_we"/>
+    <owl:ObjectProperty rdf:about="#has_for_country_capital_fk"/>
+</owl:propertyChainAxiom>
+</rdf:Description>
+
+<owl:ObjectProperty rdf:about="#loop4">
+     <rdfs:subPropertyOf rdf:resource="#city_province_country_city"/>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="#city_province_country_city4">
 <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
 <rdfs:subClassOf>
 <owl:Restriction>
@@ -2664,6 +2664,31 @@
 </owl:Class>
 
 
+<rdf:Description rdf:about="#city_island_river_province_country_city">
+<owl:propertyChainAxiom rdf:parseType="Collection">
+    <owl:ObjectProperty rdf:about="#is_located_on_of"/>
+    <owl:ObjectProperty rdf:about="#is_river_on_island_of"/>
+    <owl:ObjectProperty rdf:about="#has_for_geo_source"/>
+    <owl:ObjectProperty rdf:about="#has_for_province_country_we"/>
+    <owl:ObjectProperty rdf:about="#has_for_country_capital_fk"/>
+</owl:propertyChainAxiom>
+</rdf:Description>
+
+<owl:ObjectProperty rdf:about="#loop6">
+     <rdfs:subPropertyOf rdf:resource="#city_island_river_province_country_city"/>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="#city_island_river_province_country_city6">
+<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+     <owl:onProperty rdf:resource="#loop6"/>
+     <owl:hasSelf rdf:datatype="xsd:boolean"> true </owl:hasSelf>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+
 <rdf:Description rdf:about="#city_island_lake_river_province_country_city">
 <owl:propertyChainAxiom rdf:parseType="Collection">
     <owl:ObjectProperty rdf:about="#is_located_on_of"/>
@@ -2675,15 +2700,15 @@
 </owl:propertyChainAxiom>
 </rdf:Description>
 
-<owl:ObjectProperty rdf:about="#loop6">
+<owl:ObjectProperty rdf:about="#loop7">
      <rdfs:subPropertyOf rdf:resource="#city_island_lake_river_province_country_city"/>
 </owl:ObjectProperty>
 
-<owl:Class rdf:about="#city_island_lake_river_province_country_city6">
+<owl:Class rdf:about="#city_island_lake_river_province_country_city7">
 <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
 <rdfs:subClassOf>
 <owl:Restriction>
-     <owl:onProperty rdf:resource="#loop6"/>
+     <owl:onProperty rdf:resource="#loop7"/>
      <owl:hasSelf rdf:datatype="xsd:boolean"> true </owl:hasSelf>
 </owl:Restriction>
 </rdfs:subClassOf>
@@ -2697,36 +2722,11 @@
 </owl:propertyChainAxiom>
 </rdf:Description>
 
-<owl:ObjectProperty rdf:about="#loop7">
+<owl:ObjectProperty rdf:about="#loop8">
      <rdfs:subPropertyOf rdf:resource="#city_island_city"/>
 </owl:ObjectProperty>
 
-<owl:Class rdf:about="#city_island_city7">
-<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-<rdfs:subClassOf>
-<owl:Restriction>
-     <owl:onProperty rdf:resource="#loop7"/>
-     <owl:hasSelf rdf:datatype="xsd:boolean"> true </owl:hasSelf>
-</owl:Restriction>
-</rdfs:subClassOf>
-</owl:Class>
-
-
-<rdf:Description rdf:about="#city_island_river_province_country_city">
-<owl:propertyChainAxiom rdf:parseType="Collection">
-    <owl:ObjectProperty rdf:about="#is_located_on_of"/>
-    <owl:ObjectProperty rdf:about="#is_river_on_island_of"/>
-    <owl:ObjectProperty rdf:about="#has_for_geo_source"/>
-    <owl:ObjectProperty rdf:about="#has_for_province_country_we"/>
-    <owl:ObjectProperty rdf:about="#has_for_country_capital_fk"/>
-</owl:propertyChainAxiom>
-</rdf:Description>
-
-<owl:ObjectProperty rdf:about="#loop8">
-     <rdfs:subPropertyOf rdf:resource="#city_island_river_province_country_city"/>
-</owl:ObjectProperty>
-
-<owl:Class rdf:about="#city_island_river_province_country_city8">
+<owl:Class rdf:about="#city_island_city8">
 <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
 <rdfs:subClassOf>
 <owl:Restriction>
@@ -2737,21 +2737,21 @@
 </owl:Class>
 
 
-<rdf:Description rdf:about="#river_lake_island_mountain_province_river">
+<rdf:Description rdf:about="#island_mountain_province_river_lake_island">
 <owl:propertyChainAxiom rdf:parseType="Collection">
-    <owl:ObjectProperty rdf:about="#has_for_river_through"/>
-    <owl:ObjectProperty rdf:about="#has_for_lake_on_island"/>
     <owl:ObjectProperty rdf:about="#is_mountain_on_island_of"/>
     <owl:ObjectProperty rdf:about="#is_geo_mountain_of"/>
     <owl:ObjectProperty rdf:about="#is_geo_source_of"/>
+    <owl:ObjectProperty rdf:about="#has_for_river_through"/>
+    <owl:ObjectProperty rdf:about="#has_for_lake_on_island"/>
 </owl:propertyChainAxiom>
 </rdf:Description>
 
 <owl:ObjectProperty rdf:about="#loop9">
-     <rdfs:subPropertyOf rdf:resource="#river_lake_island_mountain_province_river"/>
+     <rdfs:subPropertyOf rdf:resource="#island_mountain_province_river_lake_island"/>
 </owl:ObjectProperty>
 
-<owl:Class rdf:about="#river_lake_island_mountain_province_river9">
+<owl:Class rdf:about="#island_mountain_province_river_lake_island9">
 <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
 <rdfs:subClassOf>
 <owl:Restriction>
@@ -2762,185 +2762,24 @@
 </owl:Class>
 
 
-<rdf:Description rdf:about="#river_lake_island_river">
+<rdf:Description rdf:about="#island_mountain_province_river_island">
 <owl:propertyChainAxiom rdf:parseType="Collection">
-    <owl:ObjectProperty rdf:about="#has_for_river_through"/>
-    <owl:ObjectProperty rdf:about="#has_for_lake_on_island"/>
-    <owl:ObjectProperty rdf:about="#is_river_on_island_of"/>
+    <owl:ObjectProperty rdf:about="#is_mountain_on_island_of"/>
+    <owl:ObjectProperty rdf:about="#is_geo_mountain_of"/>
+    <owl:ObjectProperty rdf:about="#is_geo_source_of"/>
+    <owl:ObjectProperty rdf:about="#has_for_river_on_island"/>
 </owl:propertyChainAxiom>
 </rdf:Description>
 
 <owl:ObjectProperty rdf:about="#loop10">
-     <rdfs:subPropertyOf rdf:resource="#river_lake_island_river"/>
+     <rdfs:subPropertyOf rdf:resource="#island_mountain_province_river_island"/>
 </owl:ObjectProperty>
 
-<owl:Class rdf:about="#river_lake_island_river10">
+<owl:Class rdf:about="#island_mountain_province_river_island10">
 <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
 <rdfs:subClassOf>
 <owl:Restriction>
      <owl:onProperty rdf:resource="#loop10"/>
-     <owl:hasSelf rdf:datatype="xsd:boolean"> true </owl:hasSelf>
-</owl:Restriction>
-</rdfs:subClassOf>
-</owl:Class>
-
-
-<rdf:Description rdf:about="#river_lake_river">
-<owl:propertyChainAxiom rdf:parseType="Collection">
-    <owl:ObjectProperty rdf:about="#has_for_river_through"/>
-    <owl:ObjectProperty rdf:about="#is_river_through_of"/>
-</owl:propertyChainAxiom>
-</rdf:Description>
-
-<owl:ObjectProperty rdf:about="#loop11">
-     <rdfs:subPropertyOf rdf:resource="#river_lake_river"/>
-</owl:ObjectProperty>
-
-<owl:Class rdf:about="#river_lake_river11">
-<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-<rdfs:subClassOf>
-<owl:Restriction>
-     <owl:onProperty rdf:resource="#loop11"/>
-     <owl:hasSelf rdf:datatype="xsd:boolean"> true </owl:hasSelf>
-</owl:Restriction>
-</rdfs:subClassOf>
-</owl:Class>
-
-
-<rdf:Description rdf:about="#river_province_mountain_island_lake_river">
-<owl:propertyChainAxiom rdf:parseType="Collection">
-    <owl:ObjectProperty rdf:about="#has_for_geo_source"/>
-    <owl:ObjectProperty rdf:about="#has_for_geo_mountain"/>
-    <owl:ObjectProperty rdf:about="#has_for_mountain_on_island"/>
-    <owl:ObjectProperty rdf:about="#is_lake_on_island_of"/>
-    <owl:ObjectProperty rdf:about="#is_river_through_of"/>
-</owl:propertyChainAxiom>
-</rdf:Description>
-
-<owl:ObjectProperty rdf:about="#loop12">
-     <rdfs:subPropertyOf rdf:resource="#river_province_mountain_island_lake_river"/>
-</owl:ObjectProperty>
-
-<owl:Class rdf:about="#river_province_mountain_island_lake_river12">
-<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-<rdfs:subClassOf>
-<owl:Restriction>
-     <owl:onProperty rdf:resource="#loop12"/>
-     <owl:hasSelf rdf:datatype="xsd:boolean"> true </owl:hasSelf>
-</owl:Restriction>
-</rdfs:subClassOf>
-</owl:Class>
-
-
-<rdf:Description rdf:about="#river_province_mountain_island_river">
-<owl:propertyChainAxiom rdf:parseType="Collection">
-    <owl:ObjectProperty rdf:about="#has_for_geo_source"/>
-    <owl:ObjectProperty rdf:about="#has_for_geo_mountain"/>
-    <owl:ObjectProperty rdf:about="#has_for_mountain_on_island"/>
-    <owl:ObjectProperty rdf:about="#is_river_on_island_of"/>
-</owl:propertyChainAxiom>
-</rdf:Description>
-
-<owl:ObjectProperty rdf:about="#loop13">
-     <rdfs:subPropertyOf rdf:resource="#river_province_mountain_island_river"/>
-</owl:ObjectProperty>
-
-<owl:Class rdf:about="#river_province_mountain_island_river13">
-<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-<rdfs:subClassOf>
-<owl:Restriction>
-     <owl:onProperty rdf:resource="#loop13"/>
-     <owl:hasSelf rdf:datatype="xsd:boolean"> true </owl:hasSelf>
-</owl:Restriction>
-</rdfs:subClassOf>
-</owl:Class>
-
-
-<rdf:Description rdf:about="#river_province_river">
-<owl:propertyChainAxiom rdf:parseType="Collection">
-    <owl:ObjectProperty rdf:about="#has_for_geo_source"/>
-    <owl:ObjectProperty rdf:about="#is_geo_source_of"/>
-</owl:propertyChainAxiom>
-</rdf:Description>
-
-<owl:ObjectProperty rdf:about="#loop14">
-     <rdfs:subPropertyOf rdf:resource="#river_province_river"/>
-</owl:ObjectProperty>
-
-<owl:Class rdf:about="#river_province_river14">
-<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-<rdfs:subClassOf>
-<owl:Restriction>
-     <owl:onProperty rdf:resource="#loop14"/>
-     <owl:hasSelf rdf:datatype="xsd:boolean"> true </owl:hasSelf>
-</owl:Restriction>
-</rdfs:subClassOf>
-</owl:Class>
-
-
-<rdf:Description rdf:about="#river_island_mountain_province_river">
-<owl:propertyChainAxiom rdf:parseType="Collection">
-    <owl:ObjectProperty rdf:about="#has_for_river_on_island"/>
-    <owl:ObjectProperty rdf:about="#is_mountain_on_island_of"/>
-    <owl:ObjectProperty rdf:about="#is_geo_mountain_of"/>
-    <owl:ObjectProperty rdf:about="#is_geo_source_of"/>
-</owl:propertyChainAxiom>
-</rdf:Description>
-
-<owl:ObjectProperty rdf:about="#loop15">
-     <rdfs:subPropertyOf rdf:resource="#river_island_mountain_province_river"/>
-</owl:ObjectProperty>
-
-<owl:Class rdf:about="#river_island_mountain_province_river15">
-<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-<rdfs:subClassOf>
-<owl:Restriction>
-     <owl:onProperty rdf:resource="#loop15"/>
-     <owl:hasSelf rdf:datatype="xsd:boolean"> true </owl:hasSelf>
-</owl:Restriction>
-</rdfs:subClassOf>
-</owl:Class>
-
-
-<rdf:Description rdf:about="#river_island_lake_river">
-<owl:propertyChainAxiom rdf:parseType="Collection">
-    <owl:ObjectProperty rdf:about="#has_for_river_on_island"/>
-    <owl:ObjectProperty rdf:about="#is_lake_on_island_of"/>
-    <owl:ObjectProperty rdf:about="#is_river_through_of"/>
-</owl:propertyChainAxiom>
-</rdf:Description>
-
-<owl:ObjectProperty rdf:about="#loop16">
-     <rdfs:subPropertyOf rdf:resource="#river_island_lake_river"/>
-</owl:ObjectProperty>
-
-<owl:Class rdf:about="#river_island_lake_river16">
-<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-<rdfs:subClassOf>
-<owl:Restriction>
-     <owl:onProperty rdf:resource="#loop16"/>
-     <owl:hasSelf rdf:datatype="xsd:boolean"> true </owl:hasSelf>
-</owl:Restriction>
-</rdfs:subClassOf>
-</owl:Class>
-
-
-<rdf:Description rdf:about="#river_island_river">
-<owl:propertyChainAxiom rdf:parseType="Collection">
-    <owl:ObjectProperty rdf:about="#has_for_river_on_island"/>
-    <owl:ObjectProperty rdf:about="#is_river_on_island_of"/>
-</owl:propertyChainAxiom>
-</rdf:Description>
-
-<owl:ObjectProperty rdf:about="#loop17">
-     <rdfs:subPropertyOf rdf:resource="#river_island_river"/>
-</owl:ObjectProperty>
-
-<owl:Class rdf:about="#river_island_river17">
-<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-<rdfs:subClassOf>
-<owl:Restriction>
-     <owl:onProperty rdf:resource="#loop17"/>
      <owl:hasSelf rdf:datatype="xsd:boolean"> true </owl:hasSelf>
 </owl:Restriction>
 </rdfs:subClassOf>
@@ -2954,15 +2793,132 @@
 </owl:propertyChainAxiom>
 </rdf:Description>
 
-<owl:ObjectProperty rdf:about="#loop18">
+<owl:ObjectProperty rdf:about="#loop11">
      <rdfs:subPropertyOf rdf:resource="#island_mountain_island"/>
 </owl:ObjectProperty>
 
-<owl:Class rdf:about="#island_mountain_island18">
+<owl:Class rdf:about="#island_mountain_island11">
 <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
 <rdfs:subClassOf>
 <owl:Restriction>
-     <owl:onProperty rdf:resource="#loop18"/>
+     <owl:onProperty rdf:resource="#loop11"/>
+     <owl:hasSelf rdf:datatype="xsd:boolean"> true </owl:hasSelf>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+
+<rdf:Description rdf:about="#island_river_lake_island">
+<owl:propertyChainAxiom rdf:parseType="Collection">
+    <owl:ObjectProperty rdf:about="#is_river_on_island_of"/>
+    <owl:ObjectProperty rdf:about="#has_for_river_through"/>
+    <owl:ObjectProperty rdf:about="#has_for_lake_on_island"/>
+</owl:propertyChainAxiom>
+</rdf:Description>
+
+<owl:ObjectProperty rdf:about="#loop12">
+     <rdfs:subPropertyOf rdf:resource="#island_river_lake_island"/>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="#island_river_lake_island12">
+<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+     <owl:onProperty rdf:resource="#loop12"/>
+     <owl:hasSelf rdf:datatype="xsd:boolean"> true </owl:hasSelf>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+
+<rdf:Description rdf:about="#island_river_province_mountain_island">
+<owl:propertyChainAxiom rdf:parseType="Collection">
+    <owl:ObjectProperty rdf:about="#is_river_on_island_of"/>
+    <owl:ObjectProperty rdf:about="#has_for_geo_source"/>
+    <owl:ObjectProperty rdf:about="#has_for_geo_mountain"/>
+    <owl:ObjectProperty rdf:about="#has_for_mountain_on_island"/>
+</owl:propertyChainAxiom>
+</rdf:Description>
+
+<owl:ObjectProperty rdf:about="#loop13">
+     <rdfs:subPropertyOf rdf:resource="#island_river_province_mountain_island"/>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="#island_river_province_mountain_island13">
+<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+     <owl:onProperty rdf:resource="#loop13"/>
+     <owl:hasSelf rdf:datatype="xsd:boolean"> true </owl:hasSelf>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+
+<rdf:Description rdf:about="#island_river_island">
+<owl:propertyChainAxiom rdf:parseType="Collection">
+    <owl:ObjectProperty rdf:about="#is_river_on_island_of"/>
+    <owl:ObjectProperty rdf:about="#has_for_river_on_island"/>
+</owl:propertyChainAxiom>
+</rdf:Description>
+
+<owl:ObjectProperty rdf:about="#loop14">
+     <rdfs:subPropertyOf rdf:resource="#island_river_island"/>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="#island_river_island14">
+<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+     <owl:onProperty rdf:resource="#loop14"/>
+     <owl:hasSelf rdf:datatype="xsd:boolean"> true </owl:hasSelf>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+
+<rdf:Description rdf:about="#island_lake_river_province_mountain_island">
+<owl:propertyChainAxiom rdf:parseType="Collection">
+    <owl:ObjectProperty rdf:about="#is_lake_on_island_of"/>
+    <owl:ObjectProperty rdf:about="#is_river_through_of"/>
+    <owl:ObjectProperty rdf:about="#has_for_geo_source"/>
+    <owl:ObjectProperty rdf:about="#has_for_geo_mountain"/>
+    <owl:ObjectProperty rdf:about="#has_for_mountain_on_island"/>
+</owl:propertyChainAxiom>
+</rdf:Description>
+
+<owl:ObjectProperty rdf:about="#loop15">
+     <rdfs:subPropertyOf rdf:resource="#island_lake_river_province_mountain_island"/>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="#island_lake_river_province_mountain_island15">
+<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+     <owl:onProperty rdf:resource="#loop15"/>
+     <owl:hasSelf rdf:datatype="xsd:boolean"> true </owl:hasSelf>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+
+<rdf:Description rdf:about="#island_lake_river_island">
+<owl:propertyChainAxiom rdf:parseType="Collection">
+    <owl:ObjectProperty rdf:about="#is_lake_on_island_of"/>
+    <owl:ObjectProperty rdf:about="#is_river_through_of"/>
+    <owl:ObjectProperty rdf:about="#has_for_river_on_island"/>
+</owl:propertyChainAxiom>
+</rdf:Description>
+
+<owl:ObjectProperty rdf:about="#loop16">
+     <rdfs:subPropertyOf rdf:resource="#island_lake_river_island"/>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="#island_lake_river_island16">
+<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+     <owl:onProperty rdf:resource="#loop16"/>
      <owl:hasSelf rdf:datatype="xsd:boolean"> true </owl:hasSelf>
 </owl:Restriction>
 </rdfs:subClassOf>
@@ -2976,37 +2932,15 @@
 </owl:propertyChainAxiom>
 </rdf:Description>
 
-<owl:ObjectProperty rdf:about="#loop19">
+<owl:ObjectProperty rdf:about="#loop17">
      <rdfs:subPropertyOf rdf:resource="#island_lake_island"/>
 </owl:ObjectProperty>
 
-<owl:Class rdf:about="#island_lake_island19">
+<owl:Class rdf:about="#island_lake_island17">
 <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
 <rdfs:subClassOf>
 <owl:Restriction>
-     <owl:onProperty rdf:resource="#loop19"/>
-     <owl:hasSelf rdf:datatype="xsd:boolean"> true </owl:hasSelf>
-</owl:Restriction>
-</rdfs:subClassOf>
-</owl:Class>
-
-
-<rdf:Description rdf:about="#mountain_province_mountain">
-<owl:propertyChainAxiom rdf:parseType="Collection">
-    <owl:ObjectProperty rdf:about="#is_geo_mountain_of"/>
-    <owl:ObjectProperty rdf:about="#has_for_geo_mountain"/>
-</owl:propertyChainAxiom>
-</rdf:Description>
-
-<owl:ObjectProperty rdf:about="#loop20">
-     <rdfs:subPropertyOf rdf:resource="#mountain_province_mountain"/>
-</owl:ObjectProperty>
-
-<owl:Class rdf:about="#mountain_province_mountain20">
-<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-<rdfs:subClassOf>
-<owl:Restriction>
-     <owl:onProperty rdf:resource="#loop20"/>
+     <owl:onProperty rdf:resource="#loop17"/>
      <owl:hasSelf rdf:datatype="xsd:boolean"> true </owl:hasSelf>
 </owl:Restriction>
 </rdfs:subClassOf>
@@ -3020,11 +2954,77 @@
 </owl:propertyChainAxiom>
 </rdf:Description>
 
-<owl:ObjectProperty rdf:about="#loop21">
+<owl:ObjectProperty rdf:about="#loop18">
      <rdfs:subPropertyOf rdf:resource="#desert_province_desert"/>
 </owl:ObjectProperty>
 
-<owl:Class rdf:about="#desert_province_desert21">
+<owl:Class rdf:about="#desert_province_desert18">
+<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+     <owl:onProperty rdf:resource="#loop18"/>
+     <owl:hasSelf rdf:datatype="xsd:boolean"> true </owl:hasSelf>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+
+<rdf:Description rdf:about="#river_lake_river">
+<owl:propertyChainAxiom rdf:parseType="Collection">
+    <owl:ObjectProperty rdf:about="#has_for_river_through"/>
+    <owl:ObjectProperty rdf:about="#is_river_through_of"/>
+</owl:propertyChainAxiom>
+</rdf:Description>
+
+<owl:ObjectProperty rdf:about="#loop19">
+     <rdfs:subPropertyOf rdf:resource="#river_lake_river"/>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="#river_lake_river19">
+<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+     <owl:onProperty rdf:resource="#loop19"/>
+     <owl:hasSelf rdf:datatype="xsd:boolean"> true </owl:hasSelf>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+
+<rdf:Description rdf:about="#river_province_river">
+<owl:propertyChainAxiom rdf:parseType="Collection">
+    <owl:ObjectProperty rdf:about="#has_for_geo_source"/>
+    <owl:ObjectProperty rdf:about="#is_geo_source_of"/>
+</owl:propertyChainAxiom>
+</rdf:Description>
+
+<owl:ObjectProperty rdf:about="#loop20">
+     <rdfs:subPropertyOf rdf:resource="#river_province_river"/>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="#river_province_river20">
+<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+     <owl:onProperty rdf:resource="#loop20"/>
+     <owl:hasSelf rdf:datatype="xsd:boolean"> true </owl:hasSelf>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+
+<rdf:Description rdf:about="#mountain_province_mountain">
+<owl:propertyChainAxiom rdf:parseType="Collection">
+    <owl:ObjectProperty rdf:about="#is_geo_mountain_of"/>
+    <owl:ObjectProperty rdf:about="#has_for_geo_mountain"/>
+</owl:propertyChainAxiom>
+</rdf:Description>
+
+<owl:ObjectProperty rdf:about="#loop21">
+     <rdfs:subPropertyOf rdf:resource="#mountain_province_mountain"/>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="#mountain_province_mountain21">
 <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
 <rdfs:subClassOf>
 <owl:Restriction>
